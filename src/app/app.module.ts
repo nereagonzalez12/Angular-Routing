@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AlertService } from './servicio/alert.service';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,10 @@ import { ContactoComponent } from './contacto/contacto.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgModule
+
   ],
   providers: [AlertService],
   bootstrap: [AppComponent]

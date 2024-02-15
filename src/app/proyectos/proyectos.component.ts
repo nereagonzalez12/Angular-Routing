@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertService } from '../servicio/alert.service';
+import { Proyecto } from '../clases/proyecto.model';
 
 @Component({
   selector: 'app-proyectos',
@@ -7,6 +8,12 @@ import { AlertService } from '../servicio/alert.service';
   styleUrl: './proyectos.component.css'
 })
 export class ProyectosComponent {
+
+  public inputNombre: string = '';
+  public inputPresupuesto: string = '';
+  public proyecto: Proyecto = new Proyecto();
+  public listaProyecto: Proyecto[] = new Array<Proyecto>();
+
   constructor(private alerta: AlertService) { //Inyectar el servicio en el constructor
 
   }
@@ -17,5 +24,9 @@ export class ProyectosComponent {
 
   ngOnInit() {
     //this.alerta.mostrarMensaje("ngOnInit de ProyectoComponent");
+  }
+
+  agregar() {
+
   }
 }
