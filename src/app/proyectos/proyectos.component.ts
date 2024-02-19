@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AlertService } from '../servicio/alert.service';
 import { Proyecto } from '../clases/proyecto.model';
+import { ProyectoServicioService } from '../servicio/proyecto-servicio.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-proyectos',
@@ -14,12 +16,12 @@ export class ProyectosComponent {
   public proyecto: Proyecto = new Proyecto();
   public listaProyecto: Proyecto[] = new Array<Proyecto>();
 
-  constructor(private alerta: AlertService) { //Inyectar el servicio en el constructor
+  constructor(private ruta: Router, private alerta: AlertService, private proyectoService: ProyectoServicioService) { //Inyectar el servicio en el constructor
 
   }
 
   eviarMensahe(menaje: string) {
-    //this.alerta.mostrarMensaje(menaje);
+    this.alerta.mostrarMensaje(menaje);
   }
 
   ngOnInit() {
@@ -27,6 +29,11 @@ export class ProyectosComponent {
   }
 
   agregar() {
+    this.proyecto.nombre = this.inputNombre;
+    this.proyecto.presupuesto = this.inputPresupuesto;
+    this.proyectoService.crearProyecto(this.proyecto);
 
+    //Navegar a otro componente por código.
+    this.ruta.navigate(['']);
   }
 }

@@ -9,6 +9,7 @@ import { AlertService } from './servicio/alert.service';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { FormsModule } from '@angular/forms';
+import { ProyectoServicioService } from './servicio/proyecto-servicio.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { FormsModule } from '@angular/forms';
     NgModule
 
   ],
-  providers: [AlertService],
+  providers: [AlertService, ProyectoServicioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
