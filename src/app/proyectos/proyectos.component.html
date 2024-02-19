@@ -3,13 +3,13 @@
 <form>
     <div class="form-group">
         <label for="inputNombreProyecto">Nombre de Proyecto</label>
-        <input type="text" class="form-control" id="inputNombreProyecto" placeholder="Introduce un nombre de proyecto"
-            [(ngModel)]="inputNombre">
+        <input type="text" name="nombre" class="form-control" id="inputNombreProyecto"
+            placeholder="Introduce un nombre de proyecto" [(ngModel)]="inputNombre">
 
     </div>
     <div class="form-group">
         <label for="inputNumero">Presupuesto</label>
-        <input type="text" class="form-control" id="inputNumero" placeholder="Presupuesto"
+        <input type="text" name="presupuesto" class="form-control" id="inputNumero" placeholder="Presupuesto"
             [(ngModel)]="inputPresupuesto">
     </div>
     <button type="submit" class="btn btn-primary" (click)="agregar()">Enviar</button>

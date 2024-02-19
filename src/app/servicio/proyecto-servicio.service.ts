@@ -5,16 +5,13 @@ import { Proyecto } from '../clases/proyecto.model';
   providedIn: 'root'
 })
 export class ProyectoServicioService {
-  public proyecto: Proyecto;
-  constructor() {
-    this.proyecto = new Proyecto();
+  public arrayProyecto: Proyecto[] = [];
 
-  }
   crearProyecto(p: Proyecto) {
-    this.proyecto = p;
+    this.arrayProyecto.push(p);
   }
 
-  obtenerProyecto(): Proyecto {
-    return this.proyecto;
+  obtenerListaProyectos(): Proyecto[] {
+    return this.arrayProyecto;
   }
 }

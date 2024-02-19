@@ -1,5 +1,6 @@
 export class Proyecto {
     private _nombre: string;
+    private _presupuesto: string;
 
     public get nombre(): string {
         return this._nombre;
@@ -7,7 +8,7 @@ export class Proyecto {
     public set nombre(value: string) {
         this._nombre = value;
     }
-    private _presupuesto: string;
+    
     public get presupuesto(): string {
         return this._presupuesto;
     }
