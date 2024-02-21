@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { QuienesServicioService } from '../servicio/quienes-servicio.service';
 
 @Component({
   selector: 'app-contacto',
@@ -9,7 +10,7 @@ import { Route, Router } from '@angular/router';
 export class ContactoComponent {
 
 
-  constructor(private ruta: Router) { }
+  constructor(private ruta: Router, public servicio: QuienesServicioService) { }
   volverAlHome(): void {
     this.ruta.navigate(['']);
   };
