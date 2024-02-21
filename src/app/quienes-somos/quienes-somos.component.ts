@@ -10,9 +10,7 @@ export class QuienesSomosComponent implements OnInit {
   public resultadoPeticion: any;
   public url: string = 'https://jsonplaceholder.typicode.com/posts';
   public inputIdGet: string = '';
-  constructor(private http: HttpClient) {
-
-  }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.get();
